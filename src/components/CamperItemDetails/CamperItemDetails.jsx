@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import Review from "../Review/Review";
 import Features from "../Features/Features";
+import RentForm from "../RentForm/RentForm";
 
 const customStyles = {
   content: {
@@ -112,6 +113,7 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
               )}
             </div>
           )}
+          <RentForm />
         </div>
       </div>
     </ReactModal>
