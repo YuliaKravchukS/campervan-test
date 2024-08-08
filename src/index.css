@@ -31,7 +31,7 @@ body {
   background-image: url("./assets/trip.jpg");
   padding: 15px;
   box-sizing: border-box;
-  background-size: contain;
+  background-size: cover;
 }
 
 h1 {
