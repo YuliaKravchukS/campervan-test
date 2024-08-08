@@ -3,8 +3,6 @@ import s from "./App.module.css";
 import Navigation from "./components/Navigation/Navigation";
 import { lazy, Suspense } from "react";
 import Loader from "./components/Loader/Loader";
-import Reviews from "./components/Review/Review";
-import Features from "./components/Features/Features";
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const AdvertsPage = lazy(() => import("./pages/AdvertsPage/AdvertsPage"));
 const FavoritePage = lazy(() => import("./pages/FavoritePage/FavoritePage"));
