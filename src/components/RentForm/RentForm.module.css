@@ -1,0 +1,37 @@
+.wrapForm {
+  padding: 24px;
+}
+
+.wrapForm h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.wrapForm p {
+  color: rgb(71, 84, 103);
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form input,
+.form textarea {
+  padding: 18px;
+  min-width: 400px;
+  border-radius: 10px;
+  background-color: rgb(247, 247, 247);
+  border: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(16, 24, 40, 0.6);
+}
+.form textarea {
+  resize: none;
+  height: 114px;
+}

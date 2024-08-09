@@ -2,6 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import CustomCalendar from "../CustomCalendar/CustomCalendar";
+import css from "./RentForm.module.css";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -28,11 +29,11 @@ const RentForm = () => {
   };
 
   return (
-    <div>
+    <div className={css.wrapForm}>
       <h2>Book your campervan now</h2>
       <p>Stay connected! We are always ready to help you.</p>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className={css.form} onSubmit={handleSubmit(onSubmit)}>
         <div>
           <input {...register("name")} placeholder='Name' />
           {errors.name && <p>{errors.name.message}</p>}
@@ -41,8 +42,9 @@ const RentForm = () => {
           <input {...register("email")} placeholder='Email' />
           {errors.email && <p>{errors.email.message}</p>}
         </div>
-        <div>
+        <div className={css.wrapInput}>
           <CustomCalendar
+            className={css.date}
             name='date'
             control={control}
             rules={{ required: "Booking date is required" }}
