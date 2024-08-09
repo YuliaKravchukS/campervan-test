@@ -4,7 +4,7 @@
   padding: 24px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
-  height: 358px;
+  background-color: rgba(247, 244, 247, 0.5);
 }
 
 .img {
@@ -21,6 +21,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 8px;
 }
 .tittleLeftBlock {
   display: flex;
@@ -61,7 +62,7 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 .reviews {
   color: rgb(16, 24, 40);
@@ -80,4 +81,35 @@
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 24px;
+}
+.equipmentList {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.equipmentItem {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background-color: rgb(242, 244, 247);
+}
+.equipmentItem p {
+  font-weight: 500;
+  line-height: 20px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: transparent;
+  stroke: rgb(16, 24, 40);
+  stroke-width: 1.5px;
+}
+.upperFirstLetter {
+  text-transform: capitalize;
 }

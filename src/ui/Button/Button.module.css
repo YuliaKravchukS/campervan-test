@@ -1,0 +1,39 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 200px;
+}
+
+.load {
+  width: 145px;
+  height: 56px;
+  padding: 16px 32px;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+
+  margin: 0 auto;
+  transition: background-color 3ms ease-in-out;
+}
+
+.load:hover,
+.load:focus {
+  border: 1px solid rgb(228, 72, 72);
+}
+
+.show {
+  width: 166px;
+  height: 56px;
+  padding: 16px 40px;
+  border-radius: 200px;
+  background-color: rgb(228, 72, 72);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  letter-spacing: -0.5%;
+  transition: background-color 3ms ease-in-out;
+}
+
+.show:hover,
+.show:focus {
+  background-color: rgb(216, 67, 67);
+}

@@ -4,8 +4,9 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 import { useEffect, useState } from "react";
 import { selectError, selectLoading } from "../../redux/adverts/selectors";
 import { fetchAdverts } from "../../redux/adverts/operations";
-import SeeMoreBtn from "../../components/SeeMoreBtn/SeeMoreBtn";
+// import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 import css from "./AdvertsPage.module.css";
+import Button from "../../ui/Button/Button";
 
 const AdvertsPage = () => {
   const loading = useSelector(selectLoading);
@@ -29,7 +30,9 @@ const AdvertsPage = () => {
         {loading && !error && <b>Request in progress...</b>}
         <div className={css.list}>
           <CampersList showAll={showAll} />
-          {!loading && !error && <SeeMoreBtn onClick={handleClick} />}
+          {!loading && !error && (
+            <Button onClick={handleClick} buttonText='Load more' type='load' />
+          )}
         </div>
       </div>
     </div>

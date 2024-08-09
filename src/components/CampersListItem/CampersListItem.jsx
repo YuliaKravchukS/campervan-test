@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import ShowMoreBtn from "../ShowMoreBtn/ShowMoreBtn";
 import { useState } from "react";
 import CamperItemDetails from "../CamperItemDetails/CamperItemDetails";
 import css from "./CampersListItem.module.css";
 import icons from "../../assets/icons.svg";
 import StarRatings from "react-star-ratings";
+import Button from "../../ui/Button/Button";
 
 const CampersListItem = ({ advert }) => {
   const countReviews = advert.reviews.length > 0 ? advert.reviews.length : 0;
@@ -51,24 +51,47 @@ const CampersListItem = ({ advert }) => {
           </div>
         </div>
         <p className={css.description}>{advert.description}</p>
-        <ul>
-          <li>
+        <ul className={css.equipmentList}>
+          <li className={css.equipmentItem}>
+            <svg width={20} height={20}>
+              <use href={`${icons}#icon-adults`} />
+            </svg>
             <p>{`${advert.adults} adults`}</p>
           </li>
-          <li>
-            <p>{advert.transmission}</p>
+          <li className={css.equipmentItem}>
+            <svg width={20} height={20}>
+              <use className={css.icon} href={`${icons}#icon-automatic`} />
+            </svg>
+            <p className={css.upperFirstLetter}>{advert.transmission}</p>
           </li>
-          <li>
-            <p>{advert.engine}</p>
+          <li className={css.equipmentItem}>
+            <svg width={20} height={20}>
+              <use href={`${icons}#icon-petrol`} />
+            </svg>
+            <p className={css.upperFirstLetter}>{advert.engine}</p>
           </li>
-          <li>{advert.details.kitchen && <p>Kitchen</p>}</li>
-          <li>
+          <li className={css.equipmentItem}>
+            <svg width={20} height={20}>
+              <use className={css.heart} href={`${icons}#icon-kitchen`} />
+            </svg>
+            {advert.details.kitchen && <p>Kitchen</p>}
+          </li>
+          <li className={css.equipmentItem}>
+            <svg width={20} height={20}>
+              <use className={css.icon} href={`${icons}#icon-bed`} />
+            </svg>
             <p>{`${advert.details.beds} beds`}</p>
           </li>
-          <li>{advert.details.airConditioner && <p>AC</p>}</li>
+          <li className={css.equipmentItem}>
+            <svg width={20} height={20}>
+              <use href={`${icons}#icon-aircond`} />
+            </svg>
+            {advert.details.airConditioner && <p>AC</p>}
+          </li>
         </ul>
 
-        <ShowMoreBtn onClick={openModal} />
+        <Button onClick={openModal} buttonText='Show more' type='show' />
+
         {modalIsOpen && (
           <CamperItemDetails
             advert={advert}
