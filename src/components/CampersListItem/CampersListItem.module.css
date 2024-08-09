@@ -68,6 +68,8 @@
   color: rgb(16, 24, 40);
   text-align: left;
   text-decoration-line: underline;
+  display: flex;
+  gap: 4px;
 }
 .location {
   display: flex;

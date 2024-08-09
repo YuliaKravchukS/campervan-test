@@ -1,11 +1,78 @@
-.Modal {
-  /* Your custom modal styles */
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.icon {
+  stroke: rgb(16, 24, 40);
+  fill: transparent;
 }
 
-.Overlay {
-  /* Overlay styles */
-  background-color: rgba(0, 0, 0, 0.75);
+.wrapTittle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapTittle h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.wrapLocal {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.reviews {
+  color: rgb(16, 24, 40);
+  text-align: left;
+  text-decoration-line: underline;
+  display: flex;
+  gap: 4px;
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.listGallery {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.itemGallery {
+  width: calc((100%-2 * 16px) / 3);
+}
+.imgGallery {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+}
+.description {
+  color: rgb(71, 84, 103);
+  letter-spacing: 0%;
+  margin-bottom: 44px;
+}
+.addSection {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.2);
+  margin-bottom: 44px;
+}
+.navLink {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 23px;
+  text-decoration: none;
+  color: rgb(16, 24, 40);
+}
+
+.active {
+  border-bottom: 5px solid rgb(228, 72, 72);
 }

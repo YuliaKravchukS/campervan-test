@@ -6,6 +6,8 @@ import { useState } from "react";
 import Review from "../Review/Review";
 import Features from "../Features/Features";
 import RentForm from "../RentForm/RentForm";
+import icons from "../../assets/icons.svg";
+import StarRatings from "react-star-ratings";
 
 const customStyles = {
   content: {
@@ -18,14 +20,13 @@ const customStyles = {
     maxWidth: "80%",
     maxHeight: "80%",
     overflow: "auto",
-    padding: "20px",
+    padding: "40px",
+    borderRadius: "20px",
   },
   overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.75)",
+    backgroundColor: " rgba(17, 18, 19, 0.4)",
   },
 };
-const getNavLinkClassName = ({ isActive }) =>
-  clsx(css.navLink, { [css.active]: isActive });
 
 ReactModal.setAppElement("#root");
 
@@ -36,6 +37,8 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
     typeof advert.location === "string"
       ? advert.location.split(",").reverse().join(", ")
       : "";
+  const getNavLinkClassName = (tab) =>
+    clsx(css.navLink, { [css.active]: activeTab === tab });
 
   return (
     <ReactModal
@@ -45,42 +48,53 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
     >
       <div>
         <div>
-          <div>
+          <div className={css.wrapTittle}>
             <h2>{advert.name}</h2>
-            <button onClick={closeModal}>X</button>
+            <button onClick={closeModal}>
+              <svg width={20} height={20}>
+                <use className={css.icon} href={`${icons}#icon-x`} />
+              </svg>
+            </button>
           </div>
           <div>
-            <Link to='/catalog/reviews'>
-              {`${advert.rating}(${countReviews} Reviews)`}
-            </Link>
-            <div>
-              <svg width={24} height={24}>
-                <use
-                  href='../../assets/icons.svg#icon-mapBl'
-                  width={20}
-                  height={20}
+            <div className={css.wrapLocal}>
+              <Link className={css.reviews} to='/catalog/reviews'>
+                <StarRatings
+                  numberOfStars={1}
+                  starEmptyColor='rgb(255, 197, 49)'
+                  starDimension='16px'
                 />
-              </svg>
-              <p>{locationCar}</p>
+                {`${advert.rating}(${countReviews} Reviews)`}
+              </Link>
+              <div className={css.location}>
+                <svg width={16} height={16}>
+                  <use className={css.icon} href={`${icons}#icon-mapBl`} />
+                </svg>
+                <p>{locationCar}</p>
+              </div>
             </div>
-            <p>{`${advert.price},00`}</p>
+            <p className={css.price}>{`€${advert.price}.00`}</p>
             {advert.gallery.length > 0 && (
-              <ul>
+              <ul className={css.listGallery}>
                 {advert.gallery.map((photo, index) => (
-                  <li key={index}>
-                    <img src={photo} alt={`Gallery image ${index}`} />
+                  <li className={css.itemGallery} key={index}>
+                    <img
+                      className={css.imgGallery}
+                      src={photo}
+                      alt={`Gallery image ${index}`}
+                    />
                   </li>
                 ))}
               </ul>
             )}
-            <p>{advert.description}</p>
+            <p className={css.description}>{advert.description}</p>
           </div>
         </div>
         <div>
-          <ul>
+          <ul className={css.addSection}>
             <li>
               <NavLink
-                className={getNavLinkClassName}
+                className={getNavLinkClassName("features")}
                 to='#'
                 onClick={() => setActiveTab("features")}
               >
@@ -89,7 +103,7 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
             </li>
             <li>
               <NavLink
-                className={getNavLinkClassName}
+                className={getNavLinkClassName("reviews")}
                 to='#'
                 onClick={() => setActiveTab("reviews")}
               >
