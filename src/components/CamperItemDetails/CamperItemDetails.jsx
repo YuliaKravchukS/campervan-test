@@ -91,7 +91,7 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
           </div>
         </div>
         <div>
-          <ul className={css.addSection}>
+          <ul className={css.addSectionList}>
             <li>
               <NavLink
                 className={getNavLinkClassName("features")}
@@ -111,23 +111,25 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
               </NavLink>
             </li>
           </ul>
-          {activeTab === "features" && <Features advert={advert} />}
-          {activeTab === "reviews" && (
-            <div>
-              {advert.reviews.length > 0 ? (
-                <ul>
-                  {advert.reviews.map((review, index) => (
-                    <li key={index}>
-                      <Review review={review} />
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p>No reviews available.</p>
-              )}
-            </div>
-          )}
-          <RentForm />
+          <div className={css.addSection}>
+            {activeTab === "features" && <Features advert={advert} />}
+            {activeTab === "reviews" && (
+              <div>
+                {advert.reviews.length > 0 ? (
+                  <ul>
+                    {advert.reviews.map((review, index) => (
+                      <li key={index}>
+                        <Review review={review} />
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>No reviews available.</p>
+                )}
+              </div>
+            )}
+            <RentForm />
+          </div>
         </div>
       </div>
     </ReactModal>

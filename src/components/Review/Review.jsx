@@ -1,4 +1,5 @@
 import StarRatings from "react-star-ratings";
+import css from "./Review.module.css";
 
 const Review = ({ review }) => {
   const { reviewer_name: name, reviewer_rating: rating, comment } = review;
@@ -6,8 +7,10 @@ const Review = ({ review }) => {
   return (
     <div>
       <div>
-        <div> {name.slice(0, 1).toUpperCase()}</div>
-        <p>{name}</p>
+        <div className={css.boxAvatar}>
+          <div className={css.avatar}> {name.slice(0, 1).toUpperCase()}</div>
+        </div>
+        <p className={css.name}>{name}</p>
         <StarRatings
           rating={rating}
           numberOfStars={5}
@@ -17,7 +20,7 @@ const Review = ({ review }) => {
           starSpacing='4px'
         />
       </div>
-      <p>{comment}</p>
+      <p className={css.text}>{comment}</p>
     </div>
   );
 };

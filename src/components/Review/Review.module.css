@@ -1,0 +1,14 @@
+.boxAvatar {
+  width: 60px;
+  height: 60px;
+  border: dashed 0.5px #f2f4f7;
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f2f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
