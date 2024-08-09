@@ -1,7 +1,12 @@
+.wrapUserBar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
 .boxAvatar {
   width: 60px;
   height: 60px;
-  border: dashed 0.5px #f2f4f7;
+  border: dashed 1px #f2f4f7;
 }
 .avatar {
   width: 60px;
@@ -11,4 +16,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(228, 72, 72);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.wrapName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name {
+  font-size: 18px;
+  font-weight: 600;
 }

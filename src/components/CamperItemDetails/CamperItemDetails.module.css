@@ -6,6 +6,7 @@
 .wrapTittle {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .wrapTittle h2 {
@@ -38,6 +39,7 @@
   line-height: 30px;
   letter-spacing: 0%;
   text-align: left;
+  margin-bottom: 24px;
 }
 .listGallery {
   display: flex;
@@ -79,4 +81,10 @@
 
 .active {
   border-bottom: 5px solid rgb(228, 72, 72);
+}
+
+.listReviews {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }

@@ -116,7 +116,7 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
             {activeTab === "reviews" && (
               <div>
                 {advert.reviews.length > 0 ? (
-                  <ul>
+                  <ul className={css.listReviews}>
                     {advert.reviews.map((review, index) => (
                       <li key={index}>
                         <Review review={review} />

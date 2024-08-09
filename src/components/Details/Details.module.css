@@ -1,0 +1,26 @@
+.detailsTittle {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 44px 0 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.1);
+  margin-bottom: 24px;
+}
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detailsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailsItem p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.upperFirstLetter {
+  text-transform: capitalize;
+}
