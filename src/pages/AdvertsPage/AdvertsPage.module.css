@@ -1,0 +1,12 @@
+.advertsPage {
+}
+.adverts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.list {
+  width: 75%;
+  flex: 1;
+}

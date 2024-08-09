@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectAdverts } from "../../redux/adverts/selectors";
 import CampersListItem from "../CampersListItem/CampersListItem";
+import css from "./CampersList.module.css";
 
 const CampersList = ({ showAll = false }) => {
   const adverts = useSelector(selectAdverts);
@@ -10,9 +11,9 @@ const CampersList = ({ showAll = false }) => {
   const displayedAdverts = showAll ? adverts : adverts.slice(0, 3);
 
   return (
-    <ul>
+    <ul className={css.list}>
       {displayedAdverts.map((advert) => (
-        <li key={advert._id}>
+        <li className={css.item} key={advert._id}>
           <CampersListItem advert={advert} />
         </li>
       ))}
