@@ -3,10 +3,21 @@ export const INITIAL_STATE = {
     items: [],
     loading: false,
     error: null,
+    isFavorite: false,
   },
   filters: {
     details: "",
     location: "",
     type: "",
   },
+};
+
+export const dayMappings = {
+  Monday: "MON",
+  Tuesday: "TUE",
+  Wednesday: "WED",
+  Thursday: "THU",
+  Friday: "FRI",
+  Saturday: "SAT",
+  Sunday: "SUN",
 };

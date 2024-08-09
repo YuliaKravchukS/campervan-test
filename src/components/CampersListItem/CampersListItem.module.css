@@ -14,8 +14,7 @@
   border-radius: 10px;
 }
 .wrapDescription {
-  max-width: 850px;
-  min-width: 525px;
+  width: 525px;
 }
 .wrapTittle {
   display: flex;
@@ -43,6 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 }
 
 .heart {

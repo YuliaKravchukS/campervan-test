@@ -1,3 +1,6 @@
+.wrap {
+  width: 902px;
+}
 .icon {
   stroke: rgb(16, 24, 40);
   fill: transparent;

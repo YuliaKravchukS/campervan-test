@@ -1,3 +1,6 @@
+.wrap {
+  width: 430px;
+}
 .wrapUserBar {
   display: flex;
   gap: 16px;

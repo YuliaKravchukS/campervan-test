@@ -17,7 +17,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    maxWidth: "80%",
+    width: "910x",
     maxHeight: "80%",
     overflow: "auto",
     padding: "40px",
@@ -46,7 +46,7 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
       onRequestClose={closeModal}
       style={customStyles}
     >
-      <div>
+      <div className={css.wrap}>
         <div>
           <div className={css.wrapTittle}>
             <h2>{advert.name}</h2>

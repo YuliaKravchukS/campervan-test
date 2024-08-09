@@ -1,11 +1,3 @@
-.datepicker {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
 .inputError {
   border-color: red;
 }
@@ -15,7 +7,8 @@
   font-size: 12px;
   margin-top: 5px;
 }
-.react-datepicker__header {
-  background-color: transparent;
-  border-bottom: none;
+
+.icon {
+  fill: transparent;
+  stroke: rgb(16, 24, 40);
 }

@@ -44,7 +44,6 @@ const RentForm = () => {
         </div>
         <div className={css.wrapInput}>
           <CustomCalendar
-            className={css.date}
             name='date'
             control={control}
             rules={{ required: "Booking date is required" }}
@@ -54,7 +53,9 @@ const RentForm = () => {
           <textarea {...register("comment")} placeholder='Comment' />
           {errors.comment && <p>{errors.comment.message}</p>}
         </div>
-        <button type='submit'>Send</button>
+        <button className={css.btn} type='submit'>
+          Send
+        </button>
       </form>
     </div>
   );
