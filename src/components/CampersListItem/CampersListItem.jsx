@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import CamperItemDetails from "../CamperItemDetails/CamperItemDetails";
 import css from "./CampersListItem.module.css";
@@ -56,14 +55,14 @@ const CampersListItem = ({ advert }) => {
         </div>
 
         <div className={css.wrapLocal}>
-          <Link className={css.reviews} to='/catalog/reviews'>
+          <p className={css.reviews}>
             <StarRatings
               numberOfStars={1}
               starEmptyColor='rgb(255, 197, 49)'
               starDimension='16px'
             />
             {`${advert.rating}(${countReviews} Reviews)`}
-          </Link>
+          </p>
           <div className={css.location}>
             <svg width={16} height={16}>
               <use className={css.heart} href={`${icons}#icon-mapBl`} />

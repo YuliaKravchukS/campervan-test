@@ -1,0 +1,38 @@
+.homePage {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  width: 960px;
+}
+.tittle {
+  background-image: url("../../assets/trip.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px;
+  height: 300px;
+  width: 500px;
+  margin-bottom: 15px;
+}
+
+.company {
+  color: rgb(247, 247, 247);
+  font-weight: 500;
+}
+.text {
+  color: rgb(228, 72, 72);
+  font-weight: 400;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.benefits {
+  color: rgb(255, 197, 49);
+  font-weight: 400;
+  text-decoration: underline;
+}
+.link {
+  font-style: italic;
+  font-weight: 700;
+  background-color: aliceblue;
+}

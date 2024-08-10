@@ -7,12 +7,14 @@ import { fetchAdverts } from "../../redux/adverts/operations";
 // import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 import css from "./AdvertsPage.module.css";
 import Button from "../../ui/Button/Button";
+import { useSearchParams } from "react-router-dom";
 
 const AdvertsPage = () => {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
   const dispatch = useDispatch();
   const [showAll, setShowAll] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleClick = () => {
     setShowAll(true);

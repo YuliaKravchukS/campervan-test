@@ -34,6 +34,7 @@ const CustomCalendar = ({ control, name, rules }) => {
           </svg>
         }
       />
+      {error && <p className={css.error}>{error.message}</p>}
     </div>
   );
 };

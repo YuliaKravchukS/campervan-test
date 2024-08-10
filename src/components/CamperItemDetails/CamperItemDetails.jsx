@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import css from "./CamperItemDetails.module.css";
 import ReactModal from "react-modal";
 import clsx from "clsx";
@@ -58,14 +58,14 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
           </div>
           <div>
             <div className={css.wrapLocal}>
-              <Link className={css.reviews} to='/catalog/reviews'>
+              <p className={css.reviews}>
                 <StarRatings
                   numberOfStars={1}
                   starEmptyColor='rgb(255, 197, 49)'
                   starDimension='16px'
                 />
                 {`${advert.rating}(${countReviews} Reviews)`}
-              </Link>
+              </p>
               <div className={css.location}>
                 <svg width={16} height={16}>
                   <use className={css.icon} href={`${icons}#icon-mapBl`} />

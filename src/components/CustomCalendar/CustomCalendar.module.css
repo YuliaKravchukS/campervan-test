@@ -12,3 +12,8 @@
   fill: transparent;
   stroke: rgb(16, 24, 40);
 }
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 0px;
+}

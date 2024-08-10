@@ -58,3 +58,8 @@
 .btn:focus {
   background-color: rgb(216, 67, 67);
 }
+.form .error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 0px;
+}

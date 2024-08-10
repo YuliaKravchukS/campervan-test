@@ -36,11 +36,11 @@ const RentForm = () => {
       <form className={css.form} onSubmit={handleSubmit(onSubmit)}>
         <div>
           <input {...register("name")} placeholder='Name' />
-          {errors.name && <p>{errors.name.message}</p>}
+          {errors.name && <p className={css.error}>{errors.name.message}</p>}
         </div>
         <div>
           <input {...register("email")} placeholder='Email' />
-          {errors.email && <p>{errors.email.message}</p>}
+          {errors.email && <p className={css.error}>{errors.email.message}</p>}
         </div>
         <div className={css.wrapInput}>
           <CustomCalendar
