@@ -10,6 +10,9 @@ export const INITIAL_STATE = {
     location: "",
     type: "",
   },
+  favorites: {
+    items: [],
+  },
 };
 
 export const dayMappings = {

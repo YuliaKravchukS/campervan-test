@@ -5,6 +5,7 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
   background-color: rgba(247, 244, 247, 0.5);
+  width: 888px;
 }
 
 .img {
@@ -42,7 +43,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: none;
 }
 
 .heart {
@@ -56,6 +56,7 @@
 .favoriteBtn:focus .heart {
   stroke: #e44848;
   fill: #e44848;
+  border: none;
 }
 
 .wrapLocal {

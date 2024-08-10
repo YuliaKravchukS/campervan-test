@@ -18,13 +18,16 @@ p {
   margin: 0;
   padding: 0;
 }
-
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
 #root {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   /* text-align: center; */
-  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -54,24 +57,21 @@ img {
 h1 {
   color: rgb(16, 24, 40);
   font-family: Inter;
-  font-size: 24px;
   font-weight: 600;
   line-height: 30px;
   letter-spacing: 0%;
-  text-align: left;
+  margin-bottom: 44px;
+  text-align: center;
+  font-size: 26px;
 }
 
 button {
   cursor: pointer;
-  transition: border-color 0.25s;
+  outline: none;
   border: none;
   background-color: transparent;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 .datepicker {
   padding: 18px;
   min-width: 400px;

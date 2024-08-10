@@ -24,7 +24,11 @@ const AdvertsPage = () => {
 
   return (
     <div className={css.advertsPage}>
-      <h1> Adventure Awaits: Rent Your Perfect Camping Car Today!</h1>
+      <h1>
+        {" "}
+        Adventure Awaits!
+        <br /> Rent Your Perfect Camping Car Today!
+      </h1>
       <div className={css.adverts}>
         <SearchBox />
         {loading && !error && <b>Request in progress...</b>}

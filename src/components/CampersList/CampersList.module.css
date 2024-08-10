@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 32px;
   margin-bottom: 50px;
+  width: 888px;
 }
 .item {
   width: 100%;

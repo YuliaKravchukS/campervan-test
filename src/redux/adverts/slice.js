@@ -14,11 +14,6 @@ const handleRejected = (state, action) => {
 const advertsSlice = createSlice({
   name: "adverts",
   initialState: INITIAL_STATE.adverts,
-  reducers: {
-    chooseFavorite(state, action) {
-      state.isFavorite = action.payload;
-    },
-  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchAdverts.pending, handlePending)
@@ -32,4 +27,3 @@ const advertsSlice = createSlice({
 });
 
 export const advertsReducer = advertsSlice.reducer;
-export const { chooseFavorite } = advertsSlice.actions;
