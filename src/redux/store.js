@@ -18,10 +18,15 @@ const favoritesPersistConfig = {
   storage,
   whitelist: ["items"],
 };
+const advertsPersistConfig = {
+  key: "adverts",
+  storage,
+  whitelist: ["items"],
+};
 
 export const store = configureStore({
   reducer: {
-    adverts: advertsReducer,
+    adverts: persistReducer(advertsPersistConfig, advertsReducer),
 
     favorites: persistReducer(favoritesPersistConfig, favoritesReducer),
   },

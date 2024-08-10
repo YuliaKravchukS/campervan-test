@@ -55,14 +55,14 @@ const CampersListItem = ({ advert }) => {
         </div>
 
         <div className={css.wrapLocal}>
-          <p className={css.reviews}>
+          <div className={css.reviews}>
             <StarRatings
               numberOfStars={1}
               starEmptyColor='rgb(255, 197, 49)'
               starDimension='16px'
             />
             {`${advert.rating}(${countReviews} Reviews)`}
-          </p>
+          </div>
           <div className={css.location}>
             <svg width={16} height={16}>
               <use className={css.heart} href={`${icons}#icon-mapBl`} />

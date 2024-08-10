@@ -10,7 +10,7 @@ const Loader = () => {
       >
         <g
           transform='translate(2 1)'
-          stroke='#002742'
+          stroke='#F7F7F7'
           fill='none'
           fillRule='evenodd'
           strokeLinecap='round'

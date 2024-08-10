@@ -1,19 +1,10 @@
-.inputError {
-  border-color: red;
-}
-
-.errorMessage {
-  color: red;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
 .icon {
   fill: transparent;
   stroke: rgb(16, 24, 40);
 }
+
 .error {
   color: red;
   font-size: 12px;
-  margin-bottom: 0px;
+  margin-top: 4px;
 }

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { INITIAL_STATE } from "../../constans/constans";
-import { fetchAdverts } from "./operations";
+import { fetchAdverts, fetchAdvertsPagination } from "./operations";
 
 const handlePending = (state) => {
   state.loading = true;
@@ -22,7 +22,18 @@ const advertsSlice = createSlice({
         state.error = null;
         state.items = action.payload;
       })
-      .addCase(fetchAdverts.rejected, handleRejected);
+      .addCase(fetchAdverts.rejected, handleRejected)
+      .addCase(fetchAdvertsPagination.pending, handlePending)
+      .addCase(fetchAdvertsPagination.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        if (action.meta.arg.page === 1) {
+          state.items = action.payload;
+        } else {
+          state.items = [...state.items, ...action.payload];
+        }
+      })
+      .addCase(fetchAdvertsPagination.rejected, handleRejected);
   },
 });
 

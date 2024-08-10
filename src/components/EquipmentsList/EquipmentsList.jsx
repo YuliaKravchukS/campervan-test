@@ -18,6 +18,7 @@ const EquipmentsList = ({ advert, limit }) => {
     microwave,
     gas,
     water,
+    AC,
   } = advert.details;
   const isTruthy = (value) => value !== 0 && value !== "";
 
@@ -41,6 +42,14 @@ const EquipmentsList = ({ advert, limit }) => {
           <use className={css.icon} href={`${icons}#icon-automatic`} />
         </svg>
         <p className={css.upperFirstLetter}>{transmission}</p>
+      </li>
+    ),
+    isTruthy(AC) && (
+      <li key='transmission' className={css.equipmentItem}>
+        <svg width={20} height={20}>
+          <use className={css.icon} href={`${icons}#icon-aircond`} />
+        </svg>
+        <p>AC</p>
       </li>
     ),
     isTruthy(engine) && (
@@ -72,7 +81,7 @@ const EquipmentsList = ({ advert, limit }) => {
         <svg width={20} height={20}>
           <use className={css.icon} href={`${icons}#icon-hotel-air`} />
         </svg>
-        <p>AC</p>
+        <p>{`${airConditioner} Air conditioner`}</p>
       </li>
     ),
     isTruthy(TV) && (

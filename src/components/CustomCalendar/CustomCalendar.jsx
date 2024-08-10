@@ -34,7 +34,9 @@ const CustomCalendar = ({ control, name, rules }) => {
           </svg>
         }
       />
-      {error && <p className={css.error}>{error.message}</p>}
+      {error && (
+        <p className={css.error}>{error.message || "Invalid date selected"}</p>
+      )}
     </div>
   );
 };

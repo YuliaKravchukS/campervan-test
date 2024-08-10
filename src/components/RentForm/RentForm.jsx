@@ -31,7 +31,9 @@ const RentForm = () => {
   return (
     <div className={css.wrapForm}>
       <h2>Book your campervan now</h2>
-      <p>Stay connected! We are always ready to help you.</p>
+      <p className={css.subTittle}>
+        Stay connected! We are always ready to help you.
+      </p>
 
       <form className={css.form} onSubmit={handleSubmit(onSubmit)}>
         <div>
