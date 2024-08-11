@@ -11,7 +11,7 @@
   height: 56px;
   padding: 16px 32px;
   border: 1px solid rgba(71, 84, 103, 0.2);
-  background-color: rgba(247, 247, 247, 0.2);
+  /* background-color: rgba(247, 247, 247, 0.2); */
   margin: 0 auto;
   transition: border 3ms ease-in-out;
 }

@@ -1,33 +1,33 @@
 .homePage {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  width: 960px;
+  width: 1440px;
+  padding: 30px 60px;
 }
 .tittle {
-  background-image: url("../../assets/trip.jpg");
+  background-image: url("../../assets/roadTrip.jpg");
   background-size: contain;
+  background-position: bottom;
   background-repeat: no-repeat;
-  padding: 20px;
-  height: 300px;
+  /* padding-bottom: 310px; */
+  height: 320px;
   width: 500px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .company {
-  color: rgb(247, 247, 247);
+  color: rgb(228, 72, 72);
   font-weight: 500;
 }
 .text {
-  color: rgb(228, 72, 72);
   font-weight: 400;
   text-align: start;
   margin-bottom: 10px;
 }
 
 .benefits {
-  color: rgb(255, 197, 49);
+  color: rgb(221, 151, 2);
   font-weight: 400;
   text-decoration: underline;
 }

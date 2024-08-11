@@ -2,6 +2,11 @@ import css from "./Details.module.css";
 
 const Details = ({ advert }) => {
   const { form, length, width, height, tank, consumption } = advert;
+  const formArr = {
+    alcove: "Alcove",
+    fullyIntegrated: "Fully integrated",
+    panelTruck: "Panel truck",
+  };
 
   return (
     <div>
@@ -9,7 +14,7 @@ const Details = ({ advert }) => {
       <ul className={css.detailsList}>
         <li className={css.detailsItem}>
           <p>Form</p>
-          <p className={css.upperFirstLetter}>{form}</p>
+          <p>{formArr[form]}</p>
         </li>
         <li className={css.detailsItem}>
           <p>Length</p>

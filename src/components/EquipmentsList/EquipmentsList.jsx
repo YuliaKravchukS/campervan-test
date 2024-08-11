@@ -45,7 +45,7 @@ const EquipmentsList = ({ advert, limit }) => {
       </li>
     ),
     isTruthy(AC) && (
-      <li key='transmission' className={css.equipmentItem}>
+      <li key='AC' className={css.equipmentItem}>
         <svg width={20} height={20}>
           <use className={css.icon} href={`${icons}#icon-aircond`} />
         </svg>

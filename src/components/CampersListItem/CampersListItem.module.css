@@ -9,7 +9,7 @@
 }
 
 .img {
-  object-fit: fill;
+  object-fit: cover;
   width: 290px;
   height: 310px;
   border-radius: 10px;

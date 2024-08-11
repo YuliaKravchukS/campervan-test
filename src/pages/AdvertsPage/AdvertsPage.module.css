@@ -1,9 +1,27 @@
 .adverts {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 960px;
+  min-height: 100vh;
+  padding: 30px 60px;
 }
 .list {
   width: 888px;
+}
+.advertsPage {
+  width: 1440px;
+}
+
+.advertsPage h1 {
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.background {
+  background-image: url("../../assets/tripRoad.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 1025px;
+  margin: 0 auto;
 }

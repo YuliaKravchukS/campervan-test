@@ -7,8 +7,9 @@
   font-weight: 400;
   color: rgb(16, 24, 40);
   box-sizing: border-box;
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
+  /* padding: 100px 64px; */
 }
 
 h1,
@@ -32,10 +33,10 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
-  background-image: url("./assets/mountain.jpg");
-  padding: 30px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-color: rgb(247, 247, 247); */
+
+  background-size: 100vw 100vh;
+  /* background-repeat: no-repeat; */
 }
 
 ol,

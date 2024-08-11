@@ -43,6 +43,7 @@ const AdvertsPage = () => {
         Adventure Awaits!
         <br /> Rent Your Perfect Camping Car Today!
       </h1>
+      <div className={css.background}></div>
       <div className={css.adverts}>
         {/* <SearchBox /> */}
         {loading && !error && <b>Request in progress...</b>}
