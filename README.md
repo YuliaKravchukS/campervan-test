@@ -31,7 +31,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/camper-rental-app.git
+git clone https://github.com/YuliaKravchukS/campervan-test.git
 cd camper-rental-app
 
 Install dependencies:
