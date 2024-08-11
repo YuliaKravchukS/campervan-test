@@ -8,6 +8,7 @@ import EquipmentsList from "../EquipmentsList/EquipmentsList";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/favorites/selector";
 import { addFavorite, removeFavorite } from "../../redux/favorites/slice";
+import AdvertContext from "../AdvertContext/AdvertContext";
 
 const CampersListItem = ({ advert }) => {
   const dispatch = useDispatch();
@@ -32,59 +33,66 @@ const CampersListItem = ({ advert }) => {
   };
 
   return (
-    <div className={css.campersListItem}>
-      <img className={css.img} src={advert.gallery[0]} alt={advert.name} />
-      <div className={css.wrapDescription}>
-        <div className={css.wrapTittle}>
-          <h2 className={css.tittle}>{advert.name}</h2>
-          <div className={css.tittleLeftBlock}>
-            <p className={css.price}>{`€${advert.price}.00`}</p>
-            <button className={css.favoriteBtn} onClick={handleClick}>
-              <svg className={css.favoriteIcon} width={24} height={24}>
-                <use
-                  className={css.heart}
-                  href={
-                    isFavorite
-                      ? `${icons}#icon-heartPressed`
-                      : `${icons}#icon-heart`
-                  }
-                />
+    <AdvertContext.Provider value={advert}>
+      <div className={css.campersListItem}>
+        <img className={css.img} src={advert.gallery[0]} alt={advert.name} />
+        <div className={css.wrapDescription}>
+          <div className={css.wrapTittle}>
+            <h2 className={css.tittle}>{advert.name}</h2>
+            <div className={css.tittleLeftBlock}>
+              <p className={css.price}>{`€${advert.price}.00`}</p>
+              <button className={css.favoriteBtn} onClick={handleClick}>
+                <svg className={css.favoriteIcon} width={24} height={24}>
+                  <use
+                    className={css.heart}
+                    href={
+                      isFavorite
+                        ? `${icons}#icon-heartPressed`
+                        : `${icons}#icon-heart`
+                    }
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div className={css.wrapLocal}>
+            <div className={css.reviews}>
+              <StarRatings
+                numberOfStars={1}
+                starEmptyColor='rgb(255, 197, 49)'
+                starDimension='16px'
+              />
+              {`${advert.rating}(${countReviews} Reviews)`}
+            </div>
+            <div className={css.location}>
+              <svg width={16} height={16}>
+                <use className={css.heart} href={`${icons}#icon-mapBl`} />
               </svg>
-            </button>
+              <p>{locationCar}</p>
+            </div>
           </div>
-        </div>
+          <p className={css.description}>{advert.description}</p>
 
-        <div className={css.wrapLocal}>
-          <div className={css.reviews}>
-            <StarRatings
-              numberOfStars={1}
-              starEmptyColor='rgb(255, 197, 49)'
-              starDimension='16px'
+          {/* <EquipmentsList advert={advert} limit={6} /> */}
+          <EquipmentsList limit={6} />
+
+          <Button onClick={openModal} buttonText='Show more' type='show' />
+
+          {modalIsOpen && (
+            // <CamperItemDetails
+            //   advert={advert}
+            //   modalIsOpen={modalIsOpen}
+            //   closeModal={closeModal}
+            // />
+            <CamperItemDetails
+              modalIsOpen={modalIsOpen}
+              closeModal={closeModal}
             />
-            {`${advert.rating}(${countReviews} Reviews)`}
-          </div>
-          <div className={css.location}>
-            <svg width={16} height={16}>
-              <use className={css.heart} href={`${icons}#icon-mapBl`} />
-            </svg>
-            <p>{locationCar}</p>
-          </div>
+          )}
         </div>
-        <p className={css.description}>{advert.description}</p>
-
-        <EquipmentsList advert={advert} limit={6} />
-
-        <Button onClick={openModal} buttonText='Show more' type='show' />
-
-        {modalIsOpen && (
-          <CamperItemDetails
-            advert={advert}
-            modalIsOpen={modalIsOpen}
-            closeModal={closeModal}
-          />
-        )}
       </div>
-    </div>
+    </AdvertContext.Provider>
   );
 };
 

@@ -1,6 +1,9 @@
 .wrapForm {
   padding: 24px;
   width: 448px;
+
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
 }
 
 .wrapForm h2 {
@@ -8,7 +11,7 @@
   font-weight: 600;
   margin-bottom: 8px;
 }
-subTittle {
+.subTittle {
   color: rgb(71, 84, 103);
   margin-bottom: 24px;
 }
@@ -27,6 +30,7 @@ subTittle {
   background-color: rgb(247, 247, 247);
   border: none;
   outline: none;
+  height: 56px;
 }
 
 .form input::placeholder,
@@ -36,6 +40,7 @@ subTittle {
 .form textarea {
   resize: none;
   height: 114px;
+  margin-bottom: 24px;
 }
 .btn {
   width: 160px;

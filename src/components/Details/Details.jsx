@@ -1,6 +1,11 @@
+import { useAdvert } from "../AdvertContext/AdvertContext";
 import css from "./Details.module.css";
 
-const Details = ({ advert }) => {
+// const Details = ({ advert }) => {
+
+const Details = () => {
+  const advert = useAdvert();
+
   const { form, length, width, height, tank, consumption } = advert;
   const formArr = {
     alcove: "Alcove",

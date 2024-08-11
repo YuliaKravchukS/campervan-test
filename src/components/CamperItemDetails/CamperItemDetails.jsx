@@ -8,6 +8,7 @@ import Features from "../Features/Features";
 import RentForm from "../RentForm/RentForm";
 import icons from "../../assets/icons.svg";
 import StarRatings from "react-star-ratings";
+import { useAdvert } from "../AdvertContext/AdvertContext";
 
 const customStyles = {
   content: {
@@ -30,7 +31,10 @@ const customStyles = {
 
 ReactModal.setAppElement("#root");
 
-const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
+// const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
+
+const CamperItemDetails = ({ modalIsOpen, closeModal }) => {
+  const advert = useAdvert();
   const [activeTab, setActiveTab] = useState("features");
   const countReviews = advert.reviews.length > 0 ? advert.reviews.length : 0;
   const locationCar =
@@ -46,8 +50,8 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
       onRequestClose={closeModal}
       style={customStyles}
     >
-      <div className={css.wrap}>
-        <div>
+      <div className={css.wrapScroll}>
+        <div className={css.wrap}>
           <div className={css.wrapTittle}>
             <h2>{advert.name}</h2>
             <button onClick={closeModal}>
@@ -112,7 +116,8 @@ const CamperItemDetails = ({ modalIsOpen, closeModal, advert }) => {
             </li>
           </ul>
           <div className={css.addSection}>
-            {activeTab === "features" && <Features advert={advert} />}
+            {/* {activeTab === "features" && <Features advert={advert} />} */}
+            {activeTab === "features" && <Features />}
             {activeTab === "reviews" && (
               <div>
                 {advert.reviews.length > 0 ? (

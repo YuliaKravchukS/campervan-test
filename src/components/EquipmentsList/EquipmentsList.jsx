@@ -1,7 +1,10 @@
 import css from "./EquipmentsList.module.css";
 import icons from "../../assets/icons.svg";
+import { useAdvert } from "../AdvertContext/AdvertContext";
 
-const EquipmentsList = ({ advert, limit }) => {
+const EquipmentsList = ({ limit }) => {
+  const advert = useAdvert();
+
   const { adults, children, engine, transmission } = advert;
 
   const {
