@@ -10,11 +10,13 @@
   justify-content: center;
   align-items: center;
   width: 1440px;
-  height: 100vh;
+
   padding: 30px 60px;
-  background-image: url("../../assets/trip.jpg");
-  background-repeat: repeat;
-  background-size: contain;
+  background: radial-gradient(
+    circle,
+    rgb(203, 199, 199) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .text {
@@ -22,4 +24,11 @@
   font-weight: 600;
   font-size: 26px;
   padding-bottom: 35%;
+}
+
+.item {
+  background-image: url("../../assets/trip.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  border-radius: 20px;
 }
