@@ -4,6 +4,11 @@
   flex-direction: column;
   width: 1440px;
   padding: 30px 60px;
+  background: radial-gradient(
+    circle,
+    rgb(203, 199, 199) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 .tittle {
   background-image: url("../../assets/roadTrip.jpg");

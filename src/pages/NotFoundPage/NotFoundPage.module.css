@@ -7,4 +7,9 @@
   width: 1440px;
   padding: 30px 60px;
   text-align: center;
+  background: radial-gradient(
+    circle,
+    rgb(203, 199, 199) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
